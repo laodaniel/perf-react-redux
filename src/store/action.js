@@ -31,10 +31,9 @@ export const setLaunchPage = (data) => (dispatch, getState) => {
   });
 };
 
-export const setNewUser = ({ visitDate, isNewUser }) => (dispatch) => {
+export const setNewUser = ({ visitDate }) => (dispatch) => {
   dispatch({
     type: APPLICATION_NEW_USER_SET,
     visitDate,
-    isNewUser,
   });
 };

@@ -33,11 +33,7 @@ const initialState = {
   allVariations: false,
   origin: 'http://localhost:8080',
   locale: 'fr_FR',
-  location: {
-    pathname: [],
-    search: {},
-    hash: {},
-  },
+  location: 'HOME',
   trackingAllowed: false,
   testName: '0',
   testVersion: '0',
@@ -52,10 +48,7 @@ const application = (state = initialState, action) => {
     case APPLICATION_LOCATION_SET:
       return {
         ...state,
-        location: {
-          ...initialState.location,
-          ...action.location,
-        },
+        location: action.location,
       };
     case APPLICATION_LOCALE_SET:
       return {
